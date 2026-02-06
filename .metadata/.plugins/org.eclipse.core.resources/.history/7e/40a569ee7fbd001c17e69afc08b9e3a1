@@ -1,0 +1,11 @@
+import javax.swing.JOptionPane;
+public class c05ex10x {
+	public static void main(String[] args) {
+		// Programadora: Bianca Maria 
+		//Um número inteiro de 5 dígitos e o imprima na vertical
+	String digito_primeiro = JOptionPane.showInputDialog(null,
+			
+
+	}
+
+}

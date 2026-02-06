@@ -1,0 +1,19 @@
+import javax.swing.JOptionPane;
+public class c05ex10x {
+	public static void main(String[] args) {
+		// Programadora: Bianca Maria 
+		//Um número inteiro de 5 dígitos e o imprima na vertical
+	String numero = JOptionPane.showInputDialog(null,
+		"Informe número inteiro de 5 dígitos:",
+		"Calcular",
+	JOptionPane.QUESTION_MESSAGE);
+	double numero1 = Double.valueOf(numero).doubleValue();
+	double d1 = numero1 / 10000;
+	double d2 = numero1 / 1000 % 10;
+	double d3 = numero1 / 100 % 10;
+	double d4 = numero1 / 10 % 10;
+	double d5 = numero1 % 10;
+	System.out.println(d1+"-"+d2+"-"+d3+"-"+d4+"-"+d5);	
+	}
+
+}

@@ -1,0 +1,70 @@
+import java.util.Scanner;
+public class C08EX13 {
+    //cores da bagaça 
+    public static final String 
+    ANSI_RED = "\u001B[31m",
+    ANSI_BYELLOW = "\u001B[93m",
+    ANSI_BLUE = "\u001B[34m",
+    ANSI_PURPLE = "\u001B[35m",
+    ANSI_WHITE = "\u001B[97m";
+
+    public static void main (String[]args){
+
+        System.out.print("\033[H\033[2J");
+        Scanner info = new Scanner(C08EX13.class.getResourceAsStream("/C08EX13.txt"));
+        System.out.println(ANSI_BLUE+"Bem vindo ao programa de cálculo de eleição para o governo! \n"+ANSI_WHITE);
+        String nome, menornome="";
+        int populacao,eleteires,homens,mulheres,Mmulheres=0,milhão=0,menor=999999999;
+        double percEleit;
+        while (info.hasNextLine()){
+                System.out.println("Informe o nome da cidade número:");
+                nome = info.nextLine();
+                System.out.println(nome);
+                System.out.println("Informe a população da cidade: ");
+                populacao = info.nextInt();
+                System.out.println(populacao);
+                System.out.println("Informe o número de eleitores: ");
+                eleteires = info.nextInt();
+                System.out.println(eleteires);
+                System.out.println("Informe o número de homens: ");
+                homens = info.nextInt();
+                System.out.println(homens);
+                System.out.println("Informe o número de mulheres: ");
+                mulheres = info.nextInt();
+                System.out.println(mulheres);
+
+                //Contas
+                percEleit = (eleteires*100)/populacao;
+                System.out.println("A porcentagem de eleitores é: "+percEleit+"%");
+                if (populacao<menor){
+                    menor = populacao;
+                    menornome = nome;
+                }
+                if((homens+mulheres)>populacao){
+                    System.out.println(ANSI_RED+"Há dados errados no arquivo!"+ANSI_WHITE);
+                }
+                if(mulheres>homens){
+                    Mmulheres ++;
+                }
+                if(populacao>1000000){
+                    milhão ++;
+                }
+                //Para caso acabe as linhas
+                if(info.hasNextLine()==false){
+                    break;
+                }
+                //Continua o programa
+                System.out.println(info.nextLine());   
+               
+         }  //Fim do while
+                System.out.println(ANSI_BLUE+" Cidades com mais de um milhão de Habitantes: "+milhão+ANSI_WHITE);
+                System.out.println(ANSI_BLUE+" Cidades com mais de uma cidade com mais mulheres: "+Mmulheres+ANSI_WHITE);
+                System.out.println(ANSI_BLUE+" Cidade com menor número de habitantes: "+menornome+ANSI_WHITE);
+                info.close();
+            }
+           
+        
+        }
+        
+        
+        

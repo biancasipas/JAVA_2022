@@ -1,0 +1,2 @@
+Botão direito na pasta > Open in (abrir em) > show in explorer (mostrar no explorer, explorer = explorador de arquivos)
+Ai agora é só colocar os arquivos que vc quer 

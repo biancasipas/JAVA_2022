@@ -1,0 +1,155 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class AlunoExecutavel {
+	public static void main(String[] args) {
+		ArrayList<Aluno> listaAluno = new ArrayList<>();
+		int resp, matricula, anoEntrada;
+		String email, nome, curso, Graduacao, Posgraduacao, semestreInicio;
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("ESCOLHA  [1]CRIAR ALUNO  [2] ALTERAR [3]EXIBIR ");
+		resp = teclado.nextInt();
+		switch (resp) {
+
+		case 1:// criar aluno
+			System.out.println("Digite qual tipo de aluno criar: ");
+			System.out.println("=========MENU===========");
+			System.out.println("ESCOLHA A OPÇÃO: ");
+			System.out.println("1.Aluno. ");
+			System.out.println("2.Aluno de Graduação.");
+			System.out.println("3.Aluno de Pos Graduação. ");
+			System.out.println("4.Aluno ainda não criado. ");
+
+			int digite = teclado.nextInt();
+			teclado.nextLine();
+			;
+			switch (digite) {
+			case 1:// aluno
+				System.out.println("===ALUNO===");
+				System.out.print("Qual seu nome: ");
+				nome = teclado.nextLine();
+				System.out.print("Qual sua matricula: ");
+				matricula = teclado.nextInt();
+				teclado.nextLine();
+				System.out.println("Deseja criar com email? [1] SIM [2]NAO");
+				resp = teclado.nextInt();
+				teclado.nextLine();
+				switch (resp) {
+				case 1:// com email
+					System.out.print("Qual seu email: ");
+					email = teclado.nextLine();
+					listaAluno.add(new Aluno(nome, matricula, email));// aluno
+					break;
+				case 2:// sem email
+					listaAluno.add(new Aluno(nome, matricula));
+
+				}
+				break;
+			case 2:// alunoGraduacao
+				System.out.println("===ALUNO DE GRADUAÇÃO===");
+				System.out.print("Qual seu nome: ");
+				nome = teclado.nextLine();
+				System.out.print("Qual sua matricula: ");
+				matricula = teclado.nextInt();// <=====lendo numero int
+				teclado.nextLine();// entendeu? aquele bug nao pode ler String depois de Int tem que coloca r
+									// teclado.nextlIne
+				System.out.println("Deseja criar com email? [1] SIM [2]NAO");
+				resp = teclado.nextInt();
+				teclado.nextLine();
+				switch (resp) {// com ou sem email
+				case 1:// com email
+					System.out.print("Qual seu email: ");
+					email = teclado.nextLine();
+					System.out.println("Qual curso de Graduacao: ");
+					curso = teclado.nextLine();
+					System.out.println("Criar com Ano de Entrada? [1] SIM [2] NAO");
+					resp = teclado.nextInt();
+					switch (resp) {// com ou sem ano de entraDa
+					case 1:// com ano de entrada
+						System.out.println("Digite o ano de entrada: ");
+						anoEntrada = teclado.nextInt();
+						listaAluno.add(new AlunoDeGraduacao(nome, matricula, email, curso, anoEntrada));
+						break;
+					case 2:// sem ano de entrada
+						listaAluno.add(new AlunoDeGraduacao(nome, matricula, email, curso));
+					}
+
+					break;
+				case 2:// sem email
+					System.out.println("Digite qual curso de Graduacao: ");
+					curso = teclado.nextLine();
+					System.out.println("Criar com Ano de Entrada? [1] SIM [2] NAO");
+					resp = teclado.nextInt();
+					switch (resp) {// com ou sem ano de entraDa
+					case 1:// com ano de entrada
+						System.out.println("Digite o ano de entrada: ");
+						anoEntrada = teclado.nextInt();
+						listaAluno.add(new AlunoDeGraduacao(nome, matricula, curso, anoEntrada));
+						break;
+					case 2:// sem ano de entrada
+						listaAluno.add(new AlunoDeGraduacao(nome, matricula, curso));
+						break;
+					}
+
+				case 3:
+					System.out.println("===ALUNO DE POS GRADUAÇÃO===");
+					System.out.print("Qual seu nome: ");
+					nome = teclado.nextLine();
+					System.out.print("Qual sua matricula: ");
+					matricula = teclado.nextInt();
+					teclado.nextLine();
+					System.out.println("Deseja criar com email? [1] SIM [2]NAO");
+					resp = teclado.nextInt();
+					switch (resp) {// com ou sem email
+					case 1:// com email
+						System.out.print("Qual seu email: ");
+						email = teclado.nextLine();
+						System.out.println("Digite sua graduacao: ");
+						Graduacao = teclado.nextLine();
+						System.out.println("Qual curso de Pos Graduacao: ");
+						Posgraduacao = teclado.nextLine();
+						System.out.println("Criar com Inicio de Semestre? [1] SIM [2] NAO");
+						resp = teclado.nextInt();
+						switch (resp) {// com ou sem inicio semestre
+						case 1:// com inicio semestre
+							System.out.println("Digite o inicio do semestre(mm/YYYY): ");
+							semestreInicio = teclado.nextLine();
+							listaAluno.add(new AlunoDePosGraduacao(nome, matricula, email, Graduacao, Posgraduacao,
+									semestreInicio));
+							break;
+						case 2:// sem inicio semestre //tem que ter um construtor com esses 5 aqui em ordem
+							listaAluno.add(new AlunoDePosGraduacao(nome, matricula, email, Graduacao, Posgraduacao));
+							break;
+						}
+					case 2:// sem email
+						System.out.println("Digite qual curso de Graduacao: ");
+						curso = teclado.nextLine();
+						System.out.println("Digite o curso de Pos Graduacao: ");
+						Posgraduacao = teclado.nextLine();
+						System.out.println("Criar com início do semestre? [1] SIM [2] NAO");
+						resp = teclado.nextInt();
+						teclado.nextLine();
+						switch (resp) {// com ou sem inicio do semestre
+						case 1:// com inicio do semestre
+							System.out.println("Digite o inicio do semestre(mm/YYYY): ");
+							semestreInicio = teclado.nextLine();
+							listaAluno
+									.add(new AlunoDePosGraduacao(nome, matricula, curso, Posgraduacao, semestreInicio));
+							break;
+						case 2:// sem ano de entrada
+							listaAluno.add(new AlunoDePosGraduacao(nome, matricula, curso, Posgraduacao));
+							break;
+						}
+
+					}
+					break;
+				case 4:
+					System.out.println("=====CANCELAMENTO=====");
+					break;
+				}
+
+			}
+		}
+		teclado.close();
+	}
+}

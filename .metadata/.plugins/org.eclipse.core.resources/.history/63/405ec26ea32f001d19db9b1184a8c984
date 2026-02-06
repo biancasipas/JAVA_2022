@@ -1,0 +1,44 @@
+package estudar02;
+public class retangulo{
+
+		
+	private double altura;
+	private double largura;
+	private double area;
+	private double perimetro;
+	
+	public retangulo (double altura,double largura,double area,double perimetro) {
+		this.altura = altura;
+		this.largura = largura;
+		this.area = area;
+		this.perimetro = perimetro;
+	}
+   public retangulo () {
+	   
+   }
+   public void setAltura(double altura) {
+	   this.altura = altura;
+   }
+   public double getAltura() {
+	   return altura;
+   }
+   public void setLargura (double largura) {
+	   this.largura = largura;
+   }
+   public double getLargura () {
+	   return largura;
+   }
+   public void setArea (double area) {
+	   this.area = area;
+   }
+   public double getArea () {
+	   return area;
+   }
+   public void setPerimetro (double perimetro) {
+	   this.perimetro = perimetro ;
+   }
+   public double getPerimetro () {
+	   return perimetro;
+   }
+   
+   }

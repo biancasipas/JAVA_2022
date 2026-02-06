@@ -1,0 +1,19 @@
+import javax.swing.JOptionPane;
+public class c08ex12 {
+	public static void main(String[] args) {
+		// Programadora Bianca Maria
+ String venda_produto, preco_unitario,codigo,faturamento,modelo = null;
+ int soma=0;
+   for(int aux=1; aux<=5; aux++); 
+     codigo = JOptionPane.showInputDialog(null,
+     "Digite o código do modelo do equipamento: ",
+     "A INDÚSUTRIA PRODUTORA DE MÁQUINAS AGRÍGOLAS",
+     JOptionPane.QUESTION_MESSAGE);
+     preco_unitario = JOptionPane.showInputDialog(null,
+     "Qual é o preço unitáio: ",
+     "A INDÚSUTRIA PRODUTORA DE MÁQUINAS AGRÍGOLAS",
+     JOptionPane.QUESTION_MESSAGE);
+     double venda_produto1 = Double.valueOf(venda_produto).doubleValue();
+     double codigo1 = Double.valueOf(codigo).doubleValue();
+     double preco_unitario1 = Double.valueOf(preco_unitario).doubleValue();
+     venda_produto = codigo1*preco_unitario1;

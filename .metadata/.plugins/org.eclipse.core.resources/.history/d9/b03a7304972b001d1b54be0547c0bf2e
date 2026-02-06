@@ -1,0 +1,50 @@
+public class AlunoDePosGraduacao extends  Aluno {
+    private String Graduacao;
+
+    private String Posgraduacao;
+
+    private String semestreInicio;
+
+
+    public String getGraduacao() {
+        return Graduacao;
+    }
+
+    public void setGraduacao(String Graduacao) {
+        this.Graduacao = Graduacao;
+
+    }
+    public String getPosGraduacao() {
+        return Posgraduacao;
+    }
+    public void setPosgraduacaoGraduacao(String Posgraduacao) {
+        this.Posgraduacao = Posgraduacao;
+    }
+    public String getSemestreInicio() {
+        return semestreInicio;
+    }
+    public void setSemestreInicio(String semestreInicio) {
+        this.semestreInicio = semestreInicio;
+    }
+    public AlunoDePosGraduacao (String nome,int matricula,String email,String Graduacao,String Posgraduacao, String semestreInicio){
+        super(nome, matricula, email);
+    this.Posgraduacao = Posgraduacao;
+    this.semestreInicio = semestreInicio;
+    }
+    public AlunoDePosGraduacao (String nome,int matricula,String email,String Graduacao, String Posgraduacao) {
+        super(nome, matricula, email);
+        this.Posgraduacao = Posgraduacao;
+    }
+    public AlunoDePosGraduacao (String nome,int matricula, String Posgraduacao){ 
+        super(nome,matricula);
+        this.Posgraduacao = Posgraduacao;
+    }
+    public AlunoDePosGraduacao (String nome,int matricula,String Graduacao,String Posgraduacao){
+        super(nome,matricula);
+        this.Posgraduacao = Posgraduacao;
+        this.Graduacao=Graduacao;
+    }
+   public String toString (){
+        return super.toString()+"Semestre Inicio: "+semestreInicio+ "/n"+"Graduação: "+Posgraduacao;
+    }
+}

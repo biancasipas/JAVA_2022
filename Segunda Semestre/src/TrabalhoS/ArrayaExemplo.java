@@ -1,0 +1,26 @@
+package TrabalhoS;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ArrayaExemplo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner teclado = new Scanner(System.in);
+		ArrayList<Aluno> list = new ArrayList<>();
+		System.out.println("Digite o nome: ");
+		String nome = teclado.nextLine();
+		System.out.println("Digite matricula: ");
+		int matricula = teclado.nextInt();
+		teclado.nextLine();
+		System.out.println("Digite email: ");
+		String email = teclado.nextLine();
+		list.add(new Aluno(nome,matricula,email));  
+		System.out.println(list.get(0)); //nomedoVetor[posiçao] em lista vc coloca "nomedalista".get(posicao que quer pegar)
+		
+		
+		teclado.close();
+
+	}
+
+}

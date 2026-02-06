@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class c08ex10s {
+
+	public static void main(String[] args) {
+	String insumo,insumo_maior_preco = null;
+	double preco,soma=0,maiorpreco = 0;
+	int contator=0,quantidade;
+	Scanner teclado = new Scanner(System.in);
+	do {
+		System.out.print("O nome do insumo: ");
+		insumo = teclado.nextLine();
+		teclado.nextLine();
+		System.out.print("Quantidade: ");
+		quantidade = teclado.nextInt();
+		System.out.print("Preço: ");
+		preco = teclado.nextDouble();
+		preco += soma;
+		contator++;
+		if(preco > maiorpreco) {
+			maiorpreco = preco;
+		    insumo_maior_preco = insumo;
+		}
+	}while(insumo != "X");
+	double media = soma/contator;
+	System.out.println("Insumo: "+insumo+"\n"+"Qauntidade: "+quantidade+"\n"+"Preço: "+preco);
+	System.out.println("O custo total do projeto: "+soma);
+	System.out.print("A média dos custos parciais: "+media);
+	System.out.print("O insumo de maior custo parcial: "+insumo_maior_preco);
+	}
+
+}

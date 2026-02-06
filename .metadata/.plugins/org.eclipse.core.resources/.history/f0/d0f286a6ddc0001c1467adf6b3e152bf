@@ -1,0 +1,27 @@
+import javax.swing.JOptionPane;
+public class c7ex01 {
+	public static void main(String[] args) {
+		// TODO Programadora : Bianca Maria
+		String nome_apostador = JOptionPane.showInputDialog(null,
+				"Qual seu nome do apostador: ",
+				"QUANTIDADE DE ACERTOS DE CADA APOSTADOR",
+		JOptionPane.QUESTION_MESSAGE);
+		String quantidade = JOptionPane.showInputDialog(null,
+				"Quantadade de jogos que voce acertou :",
+				"QUANTIDADE DE ACERTOS DE CADA APOSTADOR",
+		JOptionPane.QUESTION_MESSAGE);
+		double nome_apostador1 = Double.valueOf(nome_apostador).doubleValue();
+		double quantidade1 = Double.valueOf(quantidade).doubleValue();
+		double premio;
+		if (quantidade1 <= 5) 
+			quantidade1 = premio;
+	      quantidade1+= "Nenhum prêmio: ",
+		else if (quantidade1 >6 && quantidade1 <= 10) {
+		
+		}
+			
+		
+
+	}
+
+}

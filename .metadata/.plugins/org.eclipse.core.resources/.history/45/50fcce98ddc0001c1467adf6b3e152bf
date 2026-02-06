@@ -1,0 +1,48 @@
+import javax.swing.JOptionPane;
+
+public class c08ex05BAGUNÇA {
+	public static void main(String[] args) {
+		//Programadora Bianca Maria
+  for (int repeticao = 1; repeticao <= 3; repeticao++) {
+  int vota_primeiro1=0,vota_segundo2=0,vota_terceiro3=0;
+  public static final String ANSI_YELLOW = "\u001B[33m";  // AMARELHO
+  public static final String ANSI_BLUE = "\u001B[34m";    // AZUL
+  public static final String ANSI_PURPLE = "\u001B[35m";  // ROXA
+  public static final String ANSI_CYAN = "\u001B[36m";    // CIANO
+  public static final String ANSI_WHITE = "\u001B[37m";   // BRANCA
+  int total=0, cod=0,candidato_primeiro1=0,candidato_segundo1=0,candidato_terceiro1=0;
+  int nulo,voto;
+  int nulo1 = Integer.valueOf(nulo).intValue();
+  int voto1 = Integer.valueOf(voto).intValue();
+  int total1 = Integer.valueOf(total).intValue();
+  String candidato1 = "Fulano",candidato2 = "Ciclano", candidato3="Beltrano";
+  voto1 = Integer.parseInt(JOptionPane.showInputDialog(ANSI_YELLOW+"Qual número de voto"));
+  switch(voto1){
+  case 1:
+ JOptionPane.showMessageDialog(null,
+ ANSI_BLUE+"Candidato Fulano votado",
+ candidato_primeiro1++;
+  break;
+  case 2:
+ JOptionPane.showMessageDialog(null,
+ ANSI_PURPLE+"Candidato Ciclano votado",
+  candidato_segundo1++;
+  break;
+  case 3:
+ JOptionPane.showMessageDialog(null,
+  ANSI_CYAN+"Candidato Beltrano votado,
+ candidato_terceiro1++;
+ break;
+ default:
+ JOptionPane.showMessageDialog(null,
+ nulo1++;
+  break;
+  }
+  System.exit(0);
+  }
+}
+}
+ //Verificador de votos em nulo
+ total1 = candidato_primeiro1 + candidato_segundo1 + candidato_terceiro1;
+ if (total<nulo1){
+ 

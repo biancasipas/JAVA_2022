@@ -1,0 +1,36 @@
+import javax.swing.JOptionPane;
+public class c06ex12 {
+	public static void main(String[] args) {
+		// TODO Programadora: Bianca Maria
+	String bola = JOptionPane.showInputDialog(null,
+	"Quanto produção de bolas: ",
+    "Calcular: ",
+    JOptionPane.QUESTION_MESSAGE);
+	String caixa = JOptionPane.showInputDialog(null,
+	"Quantas caixa: ",
+	"Calcular: ",
+	JOptionPane.QUESTION_MESSAGE);
+	String quantidade_meses = JOptionPane.showInputDialog(null,
+	"Quantos meses para a Copa: ",
+	"Calcular: ",
+	JOptionPane.QUESTION_MESSAGE);
+	String preco0 = JOptionPane.showInputDialog(null,
+	"Qual e o preço: ",
+	"Caclular: ",
+	JOptionPane.QUESTION_MESSAGE);
+	double preco1 = Double.valueOf(preco0).doubleValue();
+	double caixa = Math.round(bola1/10);
+	double bola1 = Double.valueOf(bola).doubleValue();
+	double caixa_papelao1 = Double.valueOf(caixa).doubleValue();
+	double meses1 = Double.valueOf(quantidade_meses).doubleValue();
+	double galpao = Math.round(caixa_papelao1/850);
+	double total = (galpao*meses1)*preco1;
+	JOptionPane.showInputDialog(null,
+	"O custo total de embalagem mais custo total de  estocagem de toda a produção: "+total,
+	"Calcular",
+	JOptionPane.INFORMATION_MESSAGE);
+	
+
+	}
+
+}
